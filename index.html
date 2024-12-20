@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Celebration of Venket & Niveetha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent; /* Make header background transparent */
+            padding: 20px 0;
+            text-align: center;
+            position: relative; /* Position relative for absolute positioning of logo */
+            z-index: 1; /* Ensure header is above other content */
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 300px; /* Increase the size of the logo */
+            height: auto;
+            opacity: 0.8; /* Slightly transparent logo */
+        }
+
+        .wedding-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em; /* Large font size for the title */
+            color: #FFB6C1; /* Blush pink color for the title */
+            margin: 20px 0; /* Space around the title */
+        }
+
+        nav {
+            margin: 10px 0;
+            background-color: black; /* Black background for the navbar */
+            padding: 10px 0; /* Padding for the navbar */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal layout */
+            justify-content: center; /* Center the nav items */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Space between links */
+        }
+
+        nav ul li a {
+            color: white; /* White link color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.2em; /* Increase font size for better visibility */
+        }
+
+        nav ul li a:hover {
+            color: silver; /* Silver hover color */
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column; /* Vertical layout for main content */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+        }
+
+        section {
+            max-width: 800px; /* Increase the max width of the sections */
+            width: 100%; /* Make it responsive */
+            margin: auto;
+            padding: 30px; /* Increase padding for a spacious feel */
+            background-color: white; /* White background for sections */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Space between sections */
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #FFB6C1; /* Blush pink color for section titles */
+        }
+
+        p {
+            font-size: 1.2em; /* Increase font size for paragraphs */
+            line-height: 1.5; /* Improve readability */
+            color: #333; /* Dark text color */
+        }
+
+        ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: silver; /* Change footer background color to silver */
+            color: black; /* Change text color to black for contrast */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </div>
+        <h1 class="wedding-title">Wedding Celebration of Venket & Niveetha</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="schedule">
+            <h2>Wedding Schedule</h2>
+            <ul>
+                <li><strong>Date:</strong> 6. Januar 2025</li>
+                <li><strong>Ceremony:</strong> 16.00 Uhr Standesamt Marktgasse 16, 4310 Rheinfelden</li>
+                <li><strong>Dinner:</strong> 17.00 Uhr Restaurant zum Kloster, Hauptstrasse 3, 4464 Maisprach</li>
+            </ul>
+        </section>
+        <section id="details">
+            <p>Dress Code: Western Elegant (not in black and white).</p>
+            <p>You and your company are the greatest gifts to us, so please do not bring anything with you.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Venket & Niveetha. All rights reserved.</p>
+    </footer>
+</body>
+</html>
