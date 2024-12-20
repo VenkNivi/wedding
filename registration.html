@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding of Venket & Niveetha - Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "pIoZcWHn7qkU6WxyH",
+            });
+        })();
+    </script>
+
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent; /* Make header background transparent */
+            padding: 20px 0;
+            text-align: center;
+            position: relative; /* Position relative for absolute positioning of logo */
+            z-index: 1; /* Ensure header is above other content */
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 300px; /* Increase the size of the logo */
+            height: auto;
+            opacity: 0.8; /* Slightly transparent logo */
+        }
+
+        .wedding-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em; /* Large font size for the title */
+            color: #FFB6C1; /* Blush pink color for the title */
+            margin: 20px 0; /* Space around the title */
+        }
+
+        nav {
+            margin: 10px 0;
+            background-color: black; /* Black background for the navbar */
+            padding: 10px 0; /* Padding for the navbar */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal layout */
+            justify-content: center; /* Center the nav items */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Space between links */
+        }
+
+        nav ul li a {
+            color: white; /* White link color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.2em; /* Increase font size for better visibility */
+        }
+
+        nav ul li a:hover {
+            color: silver; /* Silver hover color */
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column; /* Vertical layout for main content */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+        }
+
+        section {
+            max-width: 800px; /* Increase the max width of the form */
+            width: 100%; /* Make it responsive */
+            margin: auto;
+            padding: 30px; /* Increase padding for a spacious feel */
+            background-color: white; /* White background for sections */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #FFB6C1; /* Blush pink color for section titles */
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px; /* Space above and below labels */
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%; /* Full width for inputs and selects */
+            padding: 12px; /* Increase padding for inputs */
+            margin-bottom: 20px; /* Space below inputs */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em; /* Increase font size for inputs */
+            text-align: center; /* Center text in inputs and selects */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        button {
+            background-color: #FFB6C1; /* Change button color to blush pink */
+            color: black; /* Change button text color to black */
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em; /* Increase button font size */
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: silver; /* Change button hover color */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: silver; /* Change footer background color to silver */
+            color: black; /* Change text color to black for contrast */
+        }
+
+        .thank-you-message {
+            display: none; /* Initially hidden */
+            font-size: 1.5em;
+            color: #FFB6C1; /* Thank you message color */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </div>
+        <h1 class="wedding-title">Registration for the Wedding</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="registration">
+            <h2>Registration</h2>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="attendance">Will you attend?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="" disabled selected style="text-align: center;">Please select</option>
+                    <option value="yes">Yes, we will attend</option>
+                    <option value="no">No, we will not attend</option>
+                </select>
+
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" min="0">
+
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" min="0">
+
+                <label for="meal">Meal Preference:</label>
+                <select id="meal" name="meal">
+                    <option value="" disabled selected style="text-align: center;">Please select</option>
+                    <option value="meat">Meat</option>
+                    <option value="shrimp">Shrimp</option>
+                    <option value="vegetarian">Vegetarian</option>
+                </select>
+
+                <label for="favoriteSong">Your Favorite Song:</label>
+                <input type="text" id="favoriteSong" name="favoriteSong">
+
+                <button type="submit">Register</button>
+            </form>
+            <p id="confirmationMessage" class="thank-you-message">Thank you for your registration!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Venket & Niveetha. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('attendance').addEventListener('change', function() {
+            const isAttending = this.value === 'yes';
+            document.getElementById('adults').required = isAttending;
+            document.getElementById('children').required = isAttending;
+            document.getElementById('meal').required = isAttending;
+            document.getElementById('favoriteSong').required = isAttending;
+        });
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value;
+            const isAttending = document.getElementById('attendance').value === 'yes';
+            let emailBody;
+
+            if (isAttending) {
+                emailBody = `Thank you for your registration, ${name}!
+                You indicated that you will bring ${document.getElementById('adults').value} adults and ${document.getElementById('children').value} children.
+                Meal preference: ${document.getElementById('meal').value}.
+                Your favorite song: ${document.getElementById('favoriteSong').value}.`;
+                let parms = {
+                    name: name,
+                    adults: document.getElementById('adults'). value,
+                    children: document.getElementById('children').value,
+                    meal: document.getElementById('meal').value,
+                    favoriteSong: document.getElementById('favoriteSong').value,
+                };
+
+                emailjs.send("service_vkug6mk", "template_qoox1of", parms)
+                    .then(function(response) {
+                        document.getElementById('registrationForm').style.display = 'none'; // Hide the form
+                        document.getElementById('confirmationMessage').style.display = 'block'; // Show thank you message
+                    }, function(error) {
+                        document.getElementById('confirmationMessage').innerText = "Error sending email: " + JSON.stringify(error);
+                    });
+            } else {
+                let parms = {
+                    name: name
+                };
+
+                emailjs.send("service_vkug6mk", "template_9y6ibvk", parms)
+                    .then(function(response) {
+                        document.getElementById('registrationForm').style.display = 'none'; // Hide the form
+                        document.getElementById('confirmationMessage').style.display = 'block'; // Show thank you message
+                    }, function(error) {
+                        document.getElementById('confirmationMessage').innerText = "Error sending email: " + JSON.stringify(error);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
