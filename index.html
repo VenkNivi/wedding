@@ -4,155 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Celebration of Venket & Niveetha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark text color */
+            background-color: #fff8f0; /* Soft background */
+            color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         header {
-            background-color: transparent; /* Make header background transparent */
+	    font-family: 'Great Vibes', cursive;
+            background-color: #f5cba0; /* Soft gold */
             padding: 20px 0;
             text-align: center;
-            position: relative; /* Position relative for absolute positioning of logo */
-            z-index: 1; /* Ensure header is above other content */
-        }
-
-        .logo-container {
-            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            max-width: 300px; /* Increase the size of the logo */
+            max-width: 150px; /* Adjust logo size for mobile */
             height: auto;
-            opacity: 0.8; /* Slightly transparent logo */
+            margin-bottom: 10px;
         }
 
         .wedding-title {
             font-family: 'Great Vibes', cursive;
-            font-size: 3em; /* Large font size for the title */
-            color: #FFB6C1; /* Blush pink color for the title */
-            margin: 20px 0; /* Space around the title */
+            font-size: 3em; /* Increased font size */
+            font-weight: bold; /* Make the title thicker */
+            color: #8B4513; /* Dark brown for the title */
+            margin: 10px 0;
         }
 
         nav {
             margin: 10px 0;
-            background-color: black; /* Black background for the navbar */
-            padding: 10px 0; /* Padding for the navbar */
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Horizontal layout */
-            justify-content: center; /* Center the nav items */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         nav ul li {
-            margin: 0 15px; /* Space between links */
+		font-family: 'Montserrat', sans-serif;
+
+            margin: 0 15px; /* Reduced margin for mobile */
         }
 
         nav ul li a {
-            color: white; /* White link color */
+            color: #DAA520; /* Dark gold */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
-            font-size: 1.2em; /* Increase font size for better visibility */
         }
 
         nav ul li a:hover {
-            color: silver; /* Silver hover color */
-            text-decoration: underline;
+            color: #CD853F; /* Soft gold hover color */
         }
 
         main {
             flex: 1;
             display: flex;
-            flex-direction: column; /* Vertical layout for main content */
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
         }
 
         section {
-            max-width: 800px; /* Increase the max width of the sections */
-            width: 100%; /* Make it responsive */
-            margin: auto;
-            padding: 30px; /* Increase padding for a spacious feel */
-            background-color: white; /* White background for sections */
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Space between sections */
         }
 
         h2 {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.5em;
+            font-size: 2em; /* Adjusted for mobile */
             margin: 20px 0;
-            color: #FFB6C1; /* Blush pink color for section titles */
+            color: #8B4513; /* Dark brown */
         }
 
         p {
-            font-size: 1.2em; /* Increase font size for paragraphs */
-            line-height: 1.5; /* Improve readability */
-            color: #333; /* Dark text color */
-        }
-
-        ul {
-            list-style-type: none; /* Remove bullet points */
-            padding: 0; /* Remove padding */
-            margin: 0; /* Remove margin */
+            font-size: 1em; /* Adjusted for mobile */
+            line-height: 1.5;
+            color: #333;
         }
 
         footer {
             text-align: center;
-            padding: 10px 0;
-            background-color: silver; /* Change footer background color to silver */
-            color: black; /* Change text color to black for contrast */
+            padding: 20px 0;
+            background-color: #f5cba0; /* Soft gold */
+            color: #8B4513; /* Dark brown for the footer */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Countdown Timer Style */
+        .countdown {
+            font-size: 1.5em;
+            color: #8B4513; /* Dark brown */
+            margin: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .wedding-title {
+                font-size: 2em; /* Smaller title for mobile */
+            }
+
+            .logo {
+                max-width: 120px; /* Smaller logo for mobile */
+            }
+
+            h2 {
+                font-size: 1.8em; /* Smaller heading for mobile */
+            }
+
+            p {
+                font-size: 0.9em; /* Smaller paragraph text for mobile */
+            }
+
+            nav ul li {
+                margin: 0 5px; /* Further reduced margin for mobile */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="img/logo.png" alt="Logo" class="logo">
-        </div>
-        <h1 class="wedding-title">Wedding Celebration of Venket & Niveetha</h1>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1 class="wedding -title" >Wedding Celebration of Venket  &  Niveetha</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+		<li><a href="index.html">Home</a></li>
                 <li><a href="registration.html">Registration</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#schedule">Wedding Schedule</a></li>
+                <li><a href="#details">Details</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <div class="countdown" id="countdown"></div>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are Venket and Niveetha, and we are excited to share this special day with you. Our journey began five years ago, and we can’t wait to take the next step together.</p>
+            <img src="img/couple.jpg" alt="Venket and Niveetha" style="max-width: 100%; border-radius: 8px;">
+        </section>
+        
         <section id="schedule">
             <h2>Wedding Schedule</h2>
-            <ul>
-                <li><strong>Date:</strong> 6. Januar 2025</li>
-                <li><strong>Ceremony:</strong> 16.00 Uhr Standesamt Marktgasse 16, 4310 Rheinfelden</li>
-                <li><strong>Dinner:</strong> 17.00 Uhr Restaurant zum Kloster, Hauptstrasse 3, 4464 Maisprach</li>
-            </ul>
-        </section>
-        <section id="details">
-            <p>Dress Code: Western Elegant (not in black and white).</p>
+            <p><strong>Date:</strong> January 6, 2025</p>
+            <p><strong>Ceremony:</strong> 4:00 PM at Standesamt Marktgasse 16, 4310 Rheinfelden</p>
+            <p><strong>Dinner:</strong> 5:00 PM at Restaurant zum Kloster, Hauptstrasse 3, 4464 Maisprach</p>
+            <p><strong>Dress Code:</strong> Western Elegant (not in black and white).</p>
             <p>You and your company are the greatest gifts to us, so please do not bring anything with you.</p>
+        </section>
+
+        <section id="details">
+            <h2>Details</h2>
+            <p>We can't wait to celebrate this special day with you, surrounded by love and joy. Your presence will make our celebration even more meaningful.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Venket & Niveetha. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Countdown Timer Script
+        const countdownDate = new Date("Jan 6, 2025 16:00:00").getTime();
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "The wedding has begun!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
