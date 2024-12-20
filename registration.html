@@ -75,6 +75,7 @@
         }
 
         nav ul li a {
+            font-family: 'Montserrat', sans-serif; /* Change font to Montserrat */
             color: #DAA520; /* Dark gold */
             text-decoration: none;
             font-weight: bold;
@@ -120,7 +121,7 @@
         input, select {
             width: 100%; /* Full width for inputs and selects */
             padding: 12px; /* Increase padding for inputs */
-            margin-bottom: 20px; /* Space below inputs */
+            margin-bottom:  20px; /* Space below inputs */
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em; /* Increase font size for inputs */
@@ -233,10 +234,10 @@
             if (isAttending) {
                 parms = {
                     name: name,
-                    adults: document.getElementById('adults').value,
+                    adults: document.getElementById('adults').value ,
                     children: document.getElementById('children').value,
                     meal: document.getElementById('meal').value,
-                    favoriteSong: document.getElementById('favoriteSong ').value,
+                    favoriteSong: document.getElementById('favoriteSong').value,
                 };
 
                 emailjs.send("service_vkug6mk", "template_qoox1of", parms)
